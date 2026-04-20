@@ -27,6 +27,6 @@ subplot(2,1,2)
 plot(t(itmid-iwinh:itmid+iwinh),x(itmid-iwinh:itmid+iwinh),'r-')
 ylim([-0.8 0.8])
 xlabel('Time [s]')
-fname = ['sin_',num2str(f0),'Hz_',num2str(Tdur),'s.png']
+fname = ['rect_',num2str(f0),'Hz_',num2str(Tdur),'s.png']
 saveas(gcf, fname)
 % end of file
