@@ -57,25 +57,25 @@ if __name__=='__main__':
         xx = emg.emg(signal=x, sampling_rate=Fs, show=False)
         xf = xx[1]
         # HPF -> Envelope
-        env, envf = func_env(xf, Fc, Fs)
+        env, envf = func_env(xf, Fc, Fs, 0)
         y[:,i-1] = envf
 
         # Draw & Export 
         plt.figure(i)
+        plt.title('Ch.{}'.format(i))
         plt.subplot(2,1,1)
         plt.plot(t, x, color=[0.2, 0.2, 0.2])
         plt.ylabel('Raw')
-        plt.title('Ch.{}'.format(i))
         plt.xlim(t_start, t_start+t_win)
-        plt.ylim(-0.7, 0.7)
+        #plt.ylim(-0.7, 0.7)
         plt.subplot(2,1,2)
         plt.plot(t, xf, color=[0.5, 0.5, 0.5])
         plt.plot(t, envf, color=[c[i-1],0,1-c[i-1]])
         plt.ylabel('HPF & Env.')
         plt.xlim(t_start, t_start+t_win)
-        plt.ylim(-0.7, 0.7)
+        #plt.ylim(-0.7, 0.7)
         plt.xlabel('Time [s]')
-        plt.pause(0.5)
+        plt.pause(1)
         plt.savefig('{}_ch{}.png'.format(fname, i))
 
     plt.figure(Nch+1)
