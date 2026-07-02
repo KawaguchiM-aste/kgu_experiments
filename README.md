@@ -15,9 +15,7 @@
 
 <a id="appendix_bitalino"></a>
 ## Bitalino (r)evolution
-[![bitalino (r)evolution + OpenSignalsで生体信号計測をはじめよう](https://www.youtube.com/watch?v=Y25ijv5EEKM)](https://www.youtube.com/watch?v=Y25ijv5EEKM)
-
-- 本科目では，上記動画のようにOpenSignalsソフトウェアで計測し，Pythonコードで解析(可視化)を行う
+- 本科目では，[この動画(YouTube)](https://www.youtube.com/watch?v=Y25ijv5EEKM)のようにOpenSignalsソフトウェアで計測し，Pythonコードで解析(可視化)を行う
 - OpenSignalsのインストール方法，ペアリングについては省略する．
 - いずれの実験においても，以下のことを確認すること
   - チャンネルの設定: どのチャンネル(A1, A2,...)にどの種類のセンサを接続したか．
