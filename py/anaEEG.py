@@ -62,12 +62,12 @@ class anaEEG:
     for i in range (len(chNames)):
       y = x[:,i+1] - np.mean(x[:,i+1])
       Pabs,Prel=PSD.funcRelPower(t,y,fRange,sw=0,fname_export=fname_ex)
-      str=\
+      s=\
         '{}:alphaL={:.3E}, alphaH={:.3E}, beta={:.3E}, n_alphaL={:.3f}, n_alphaH={:.3f}, n_beta={:.3f}'.\
         format(chNames[i],Pabs[0],Pabs[1],Pabs[2],Prel[0],Prel[1],Prel[2])
-      plt.title(str)
+      plt.title(s)
       plt.pause(3)
-      print(str)
+      print(s)
       plt.savefig('{}_{}.png'.format(fname_ex, chNames[i]))   
 
   def funcEEGPower_time(self,Fs,x,chNames,fname_ex='EEG_Power_t'):
@@ -100,8 +100,8 @@ if __name__=='__main__':
   Nargs = len(args)
   chNames=[]
   now=datetime.datetime.now()
-  str=now.strftime('%Y%m%d%H%M%S')
-  exfname=str+'_EEG'
+  s=now.strftime('%Y%m%d%H%M%S')
+  exfname=s+'_EEG'
   j=0
   for i in range(1,Nargs):
     if i%2 ==1:
