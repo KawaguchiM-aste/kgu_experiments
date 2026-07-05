@@ -31,7 +31,7 @@ def func_env(x, Fc, Fs, show=1):
 
 def func_mvc(x, xenv, t, Fs):
     flag = 0
-    print('*** calc. MVC ***')
+    print('*** calc. RMS ***')
     while flag == 0:
         plt.cla()
         plt.plot(t, x, 'k-', linewidth=0.5, alpha=0.2)
@@ -44,7 +44,7 @@ def func_mvc(x, xenv, t, Fs):
         plt.plot(t[it_start:it_end], xenv[it_start:it_end], 'r-', linewidth=2)
         plt.xlabel('Time [s]')
         plt.pause(2)
-        tmp = input('Press [Y], then mvc will be calculated. : ')
+        tmp = input('Press [Y], then RMS will be calculated. : ')
         if tmp.lower() == 'y':
             flag = 1
     rmsEMG = np.sqrt(np.mean(xenv[it_start:it_end]**2))
