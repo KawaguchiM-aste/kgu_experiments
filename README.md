@@ -22,7 +22,7 @@
   - 音声信号の生成から解析までの過程をMATLABで行う
 - 音声信号の生成用MATLABコード
   - いずれもmp3ファイルを出力する
-  - [gen_sinsound.m](./m/gen_sinsound.m): 純音$x(t)=A\sin(\omega t)$を生成
+  - [gen_sinsound.m](./m/gen_sinsound.m): 純音 $x(t)=A\sin(\omega t)$ を生成
   - [gen_rectsound.m](./m/gen_rectsound.m): 矩形波を生成
   - [gen_unsound.m](./m/gen_unsound.m): 「うなり」の生成
   - [gen_amsound.m](./m/gen_amsound.m): 振幅変調
